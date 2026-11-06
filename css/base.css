@@ -6,17 +6,17 @@
 
 :root {
   /* Paleta cromática */
-  --bg: #111214;
-  --panel: #1b1c1f;
-  --field: #26272b;
-  --deep: #0c0d0f;
-  --input: #0c0d0f;
-  --line: #33353b;
-  --line-alt: #3a3c42;
-  --text: #e8e8ea;
-  --muted: #8a8c93;
-  --lime: #c6f500;
-  --lime-ink: #0c0d10;
+--bg: #72727c;       /* Fondo general (Gris oscuro) */
+  --panel: #2a2d32;    /* Paneles y tarjetas (Gris medio) */
+  --field: #33373d;    /* Campos y contenedores */
+  --deep: #16181b;     
+  --input: #16181b;    
+  --line: #3d424b;     
+  --line-alt: #484e58; 
+  --text: #e8e8ea;     
+  --muted: #a8a8b3;    
+  --lime: #26eee4;     /* ¡Aquí cambias el verde neón por verde esmeralda! */
+  --lime-ink: #0c0d10; 
   --ink: #0c0d10;
   --red: #e5282b;
 
