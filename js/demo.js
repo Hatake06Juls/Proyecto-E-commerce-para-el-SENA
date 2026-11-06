@@ -36,5 +36,8 @@ contador.textContent = "05";
 
 //Tallas
 const tallaXS = document.querySelector(".tallas button");
-console.log("tallas", tallas.length);
+//console.log("tallas", tallas.length);
 tallaXS.setAttribute("aria-pressed", true);
+
+// COPONENTE FILTROS
+document.querySelector("#filters"). classList.toggle("open");
