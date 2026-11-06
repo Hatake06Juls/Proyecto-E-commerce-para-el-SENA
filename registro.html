@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear Cuenta · KULT STUDIO</title>
+  <meta name="description"
+    content="Registro privado en la lista exclusiva de KULT STUDIO Colombia. Acceso alpha a drops limitados y despachos preferenciales.">
+
+  <!-- Estilos modulares -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+
+</head>
+
+<body class="auth-page">
+
+  <!-- Barra superior minimalista -->
+  <header class="bar">
+    <a class="brand" href="index.html">
+      <span class="logo" aria-hidden="true">KULT</span>
+      <span><b>KULT</b><small>Studio // Lab</small></span>
+    </a>
+    <nav>
+      <span class="cur mono">CUR: COP ($)</span>
+      <a class="back mono" href="index.html">[Volver a la tienda]</a>
+    </nav>
+  </header>
+
+  <main class="auth-main">
+    <div class="auth-grid reg-grid">
+      <!-- Panel de Introducción Izquierdo -->
+      <section class="auth-card">
+        <span class="tag mono">Sistema de admisión // Protocolo CO-2024</span>
+        <h1>Crear tu cuenta</h1>
+        <p class="auth-sub">// Registro exclusivo drop list</p>
+        <p class="lead">Únete a la lista privada de KULT STUDIO para adquirir drops limitados con despacho express en
+          Colombia antes de cada lanzamiento global.</p>
+
+        <div class="visual wide" role="img" aria-label="Espacio industrial KULT">
+          <div class="mock" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="cap mono">
+            <span>Bogotá, Colombia // 04.6097° N, 74.0817° W<br>Edición serial limitada // Run 08</span>
+            <span class="alpha">[Acceso alpha]</span>
+          </div>
+        </div>
+
+        <div class="quota">
+          <div class="row mono"><span>Disponibilidad de cupo mensual</span><b>87% asignado</b></div>
+          <div class="meter" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"><span
+              style="width:87%"></span></div>
+          <p class="mono">
+            <svg width="14" height="16" viewBox="0 0 14 16" fill="none" stroke="#c6f500" stroke-width="1.5"
+              aria-hidden="true">
+              <path d="M7 1l5.5 2v5c0 3.5-2.5 6-5.5 7-3-1-5.5-3.5-5.5-7V3z" />
+            </svg>
+            <span>100% datos privados // cero spam comercial // sistema v.4.02</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- Formulario de Registro Derecho -->
+      <section class="auth-card" aria-labelledby="t-reg">
+        <div class="card-head">
+          <b id="t-reg">Datos de registro</b>
+          <span>[BOG/MDE/CLO/BAQ]</span>
+        </div>
+
+        <form id="reg" class="form-grid-2" novalidate>
+          <div class="f">
+            <label for="n">Nombres <em>*</em></label>
+            <input id="n" type="text" placeholder="Ej. Mateo" autocomplete="given-name" required>
+          </div>
+
+          <div class="f">
+            <label for="a">Apellidos <em>*</em></label>
+            <input id="a" type="text" placeholder="Ej. Restrepo Cruz" autocomplete="family-name" required>
+          </div>
+
+          <div class="f full-col">
+            <label for="e">Correo electrónico <em>*</em></label>
+            <input id="e" type="email" placeholder="identidad@dominio.co" autocomplete="email" required>
+          </div>
+
+          <div class="f">
+            <label for="t">Móvil SMS drops (+57 Colombia) <em>*</em></label>
+            <div class="phone">
+              <span>+57</span>
+              <input id="t" type="tel" inputmode="numeric" placeholder="300 000 0000" autocomplete="tel-national"
+                required>
+            </div>
+          </div>
+
+          <div class="f">
+            <label for="c">Ciudad despacho <em>*</em></label>
+            <select id="c" required>
+              <option value="" selected disabled>Seleccionar…</option>
+              <option>Bogotá</option>
+              <option>Medellín</option>
+              <option>Cali</option>
+              <option>Barranquilla</option>
+              <option>Cartagena</option>
+              <option>Bucaramanga</option>
+              <option>Otra ciudad</option>
+            </select>
+          </div>
+
+          <div class="f">
+            <label for="p1">Contraseña segura <em>*</em></label>
+            <input id="p1" type="password" placeholder="••••••••••••" autocomplete="new-password" minlength="8"
+              required>
+          </div>
+
+          <div class="f">
+            <label for="p2">Confirmar contraseña <em>*</em></label>
+            <input id="p2" type="password" placeholder="••••••••••••" autocomplete="new-password" required>
+          </div>
+
+          <div class="strength full-col" aria-live="polite">
+            <div class="row">
+              <span>Nivel de cripto-seguridad</span>
+              <span id="lvl">Vacío</span>
+            </div>
+            <div class="bar2"><span id="fill"></span></div>
+            <small>Mínimo 8 caracteres, alfanumérico con caracteres especiales.</small>
+          </div>
+
+          <fieldset class="f full-col" style="border:0;padding:0;min-width:0">
+            <legend class="lbl"
+              style="width:100%;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+              <span>Talla habitual de preferencia (pre-reserva)</span>
+              <span style="color:var(--lime)">[Cupo 1 unidad]</span>
+            </legend>
+            <div class="sizes-reg">
+              <input type="radio" name="talla" id="s1" value="S">
+              <label for="s1">S</label>
+              <input type="radio" name="talla" id="s2" value="M" checked>
+              <label for="s2">M</label>
+              <input type="radio" name="talla" id="s3" value="L">
+              <label for="s3">L</label>
+              <input type="radio" name="talla" id="s4" value="XL">
+              <label for="s4">XL</label>
+              <input type="radio" name="talla" id="s5" value="XXL">
+              <label for="s5">XXL</label>
+            </div>
+          </fieldset>
+
+          <label class="check full-col" style="font-family:var(--body);font-size:.85rem">
+            <input type="checkbox" checked>
+            <span>Deseo recibir claves de acceso anticipado 15 minutos antes vía WhatsApp/SMS antes del lanzamiento
+              oficial.</span>
+          </label>
+
+          <label class="check full-col" style="font-family:var(--body);font-size:.85rem">
+            <input type="checkbox" required>
+            <span>Acepto los <a href="#" style="text-decoration:underline">Términos de Servicio</a> y la <a href="#"
+                style="text-decoration:underline">Política de Privacidad</a> de KULT STUDIO Colombia.</span>
+          </label>
+
+          <button class="cta full-col" type="submit">Crear identificador de miembro
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="1.6"
+              aria-hidden="true">
+              <path d="M1 6h13M9 1l5 5-5 5" />
+            </svg>
+          </button>
+
+          <div class="or full-col mono">O accede rápidamente con</div>
+
+          <div class="social full-col">
+            <button type="button">
+              <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true">
+                <path fill="#fff"
+                  d="M44.5 20H24v8.5h11.8C34.7 33.9 30.1 37 24 37c-7.2 0-13-5.8-13-13s5.8-13 13-13c3.1 0 5.9 1.1 8.1 2.9l6.4-6.4C34.6 4.1 29.6 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.3-.2-2.7-.5-4z" />
+              </svg>
+              Google accreditation
+            </button>
+            <button type="button">
+              <svg width="16" height="18" viewBox="0 0 384 512" fill="#fff" aria-hidden="true">
+                <path
+                  d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+              </svg>
+              Apple passport
+            </button>
+          </div>
+
+          <p class="full-col mono" style="background:var(--field);padding:16px;text-align:center;color:var(--muted)">
+            ¿Ya posees identificador de acceso? <a href="login.html" style="color:var(--lime);font-weight:700">[Iniciar
+              sesión aquí]</a>
+          </p>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer Minimalista -->
+  <footer class="auth-foot">
+    <span>© 2026 KULT STUDIO Inc. Protocolo seguro // Bogotá, Colombia</span>
+    <span class="ok">Edición limitada • Seguridad activa</span>
+  </footer>
+
+</body>
+
+</html>

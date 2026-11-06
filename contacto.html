@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto &amp; Soporte · KULT STUDIO</title>
+  <meta name="description"
+    content="Centro de soporte oficial, despachos nacionales y atención técnica para pedidos de KULT STUDIO en Bogotá y Medellín, Colombia.">
+
+  <!-- Estilos modulares -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/auth.css">
+
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: var(--gap);
+      padding-block: clamp(32px, 5vw, 64px);
+    }
+
+    .info-box {
+      background: var(--panel);
+      padding: clamp(20px, 3vw, 36px);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .loc-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .loc-card {
+      background: var(--deep);
+      border: 1px solid var(--line);
+      padding: 16px;
+    }
+
+    .loc-card b {
+      color: var(--lime);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .loc-card p {
+      font-size: .8rem;
+      color: #b0b2b8;
+    }
+
+    @media (max-width: 960px) {
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .loc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Barra superior informativa -->
+  <div class="ticker mono">
+    <div class="wrap">
+      <span><b>■</b> Soporte Técnico // Online</span>
+      <span class="mid">Atención al cliente de lunes a sábado 8:00 AM - 6:00 PM COT</span>
+      <span class="loc">Hubs: BOG / MDE // Colombia &nbsp; <b>V.4.02</b></span>
+    </div>
+  </div>
+
+  <!-- Cabecera Principal -->
+  <header class="site">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <span class="logo" aria-hidden="true">KULT</span>
+        <span><b>KULT</b><small>Studio // Lab</small></span>
+      </a>
+
+      <nav class="main" id="nav" aria-label="Navegación principal">
+        <a href="coleccion.html">Colección</a>
+        <a href="index.html#piezas">Novedades</a>
+        <a href="coleccion.html">Gráficas</a>
+        <a href="index.html#categorias">Oversized</a>
+        <a href="contacto.html" class="on" aria-current="page">Contacto</a>
+        <a href="login.html">Acceso Clientes</a>
+      </nav>
+
+      <div class="tools">
+        <label class="search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <circle cx="11" cy="11" r="7" />
+            <path d="M21 21l-4-4" />
+          </svg>
+          <input type="search" placeholder="Buscar en la tienda..." aria-label="Buscar">
+          <kbd>⌘K</kbd>
+        </label>
+
+        <span class="cur">COP</span>
+
+        <button class="icon-btn" aria-label="Favoritos">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M12 21s-8-5-8-11a5 5 0 019-3 5 5 0 019 3c0 6-8 11-8 11z" />
+          </svg>
+          <i>0</i>
+        </button>
+
+        <a class="cart" href="coleccion.html" aria-label="Ver carrito">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            aria-hidden="true">
+            <path d="M5 7h14l-1 14H6zM9 7a3 3 0 016 0" />
+          </svg>
+          <span class="mono" style="font-size:.65rem">Cart</span>
+          <b>02</b>
+        </a>
+
+        <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido de Contacto -->
+  <main class="wrap">
+    <div class="contact-layout">
+      <!-- Panel de Información y Sedes -->
+      <section class="info-box">
+        <div>
+          <span class="tag mono">Canal de Transmisión Oficial</span>
+          <h1 style="margin-top:12px">Contacto &amp; Soporte al Cliente</h1>
+          <p class="lead" style="margin-top:10px">¿Tienes consultas sobre tu pedido, especificaciones de gramaje o
+            cambios de talla? Nuestro equipo en Colombia responde en menos de 24 horas hábiles.</p>
+        </div>
+
+        <div class="loc-grid">
+          <article class="loc-card">
+            <b class="mono">Hub Bogotá (Centro)</b>
+            <p>Cra. 13 # 72 - 30, Chapinero<br>Despachos Express Bogotá D.C.<br><span class="mono"
+                style="color:var(--lime)">pickup-bog@kultstudio.co</span></p>
+          </article>
+
+          <article class="loc-card">
+            <b class="mono">Hub Medellín (Taller)</b>
+            <p>Cra. 36 # 10 - 25, El Poblado<br>Producción &amp; Acabados Textiles<br><span class="mono"
+                style="color:var(--lime)">lab-mde@kultstudio.co</span></p>
+          </article>
+        </div>
+
+        <div class="node mono">
+          <span>Tiempos promedio de respuesta // Envíos activos</span>
+          <span class="on">Tiempo medio: 45 min</span>
+        </div>
+      </section>
+
+      <!-- Formulario de Contacto -->
+      <section class="auth-card">
+        <div class="term mono">
+          <span>Formulario // Soporte Directo</span>
+          <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+
+        <form id="contact-form" action="#" method="post" style="display:flex;flex-direction:column;gap:18px">
+          <div class="f">
+            <label for="c-name">Nombre completo <em>*</em></label>
+            <input id="c-name" type="text" placeholder="Ej. Sebastián Morales" required>
+          </div>
+
+          <div class="f">
+            <label for="c-email">Correo electrónico registrado <em>*</em></label>
+            <input id="c-email" type="email" placeholder="sebastian@correo.co" required>
+          </div>
+
+          <div class="f">
+            <label for="c-topic">Asunto de la consulta <em>*</em></label>
+            <select id="c-topic" required>
+              <option value="" disabled selected>Selecciona un motivo...</option>
+              <option>Estado de despacho / Guía de envío</option>
+              <option>Cambio de talla / Garantía de prenda</option>
+              <option>Consulta de gramajes y cuidado textil</option>
+              <option>Alianzas y colaboraciones comerciales</option>
+              <option>Otro requerimiento</option>
+            </select>
+          </div>
+
+          <div class="f">
+            <label for="c-msg">Mensaje detallado <em>*</em></label>
+            <textarea id="c-msg" rows="4" placeholder="Escribe aquí tu consulta o número de pedido..."
+              required></textarea>
+          </div>
+
+          <button class="cta" type="submit">Enviar mensaje al laboratorio
+            <svg width="16" height="12" viewBox="0 0 16 12" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <path d="M1 6h13M9 1l5 5-5 5" />
+            </svg>
+          </button>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer General -->
+  <footer class="site">
+    <div class="wrap">
+      <div class="fgrid">
+        <div>
+          <a class="brand" href="index.html">
+            <b style="font:800 1.2rem var(--display)">KULT</b>
+            <small>Studio</small>
+          </a>
+          <p>Operando en la intersección del brutalismo subcultural, manipulación de serigrafía de alta densidad y
+            cortes arquitectónicos pesados.</p>
+          <div class="chips mono">
+            <span>Certified 280GSM</span>
+            <span>100% Organic</span>
+          </div>
+        </div>
+
+        <div>
+          <h4>Catálogo</h4>
+          <ul>
+            <li><a href="coleccion.html">Todas las prendas</a></li>
+            <li><a href="index.html#piezas">Nuevos lanzamientos</a></li>
+            <li><a href="coleccion.html">Gráficos pesados</a></li>
+            <li><a href="index.html#categorias">Boxy &amp; Oversized</a></li>
+            <li><a href="coleccion.html">Colección Completa</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Atención al Cliente</h4>
+          <ul>
+            <li><a href="contacto.html">Soporte y Contacto</a></li>
+            <li><a href="login.html">Rastreo de envíos</a></li>
+            <li><a href="coleccion.html">Guía de tallas</a></li>
+            <li><a href="contacto.html">Envíos nacionales</a></li>
+            <li><a href="registro.html">Membresía privada</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Red Oficial</h4>
+          <ul>
+            <li><a href="#">INSTAGRAM <span>[EXT]</span></a></li>
+            <li><a href="#">DISCORD ARCHIVE <span>[EXT]</span></a></li>
+            <li><a href="#">SPOTIFY TRANSMISSIONS <span>[EXT]</span></a></li>
+            <li><a href="contacto.html">Sede Bogotá // Medellín</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fbot mono">
+        <span class="l">© 2026 KULT STUDIO Inc. • Todos los derechos reservados • <b>Tienda oficial Colombia</b></span>
+        <span class="pay">
+          <span>🔒 Cifrado SSL 256-bit</span>
+          <span>Wompi // PSE // Tarjetas</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

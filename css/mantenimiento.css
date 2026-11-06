@@ -1,0 +1,176 @@
+/* ==========================================================================
+   KULT STUDIO · ESTILOS DE PÁGINA EN MANTENIMIENTO
+   ========================================================================== */
+
+/* Fondo ambiental con resplandor sutil */
+body.maint-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background-image: 
+    radial-gradient(50% 35% at 15% 30%, rgba(198, 245, 0, .08), transparent 70%),
+    radial-gradient(40% 30% at 100% 100%, rgba(198, 245, 0, .05), transparent 70%);
+}
+
+main.maint-main {
+  flex: 1;
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 72px) var(--gap);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 72px);
+  align-items: center;
+}
+
+/* Arte SVG Isométrico y Animaciones CSS */
+.art svg {
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  overflow: visible;
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.spin {
+  animation: spin 14s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.spin.r {
+  animation-direction: reverse;
+  animation-duration: 9s;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.blink {
+  animation: blink 1.4s steps(2) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: .25;
+  }
+}
+
+/* Textos y contenido informativo */
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2.5vw, 24px);
+}
+
+.copy .tag {
+  align-self: flex-start;
+  background: var(--panel);
+  color: var(--lime);
+  padding: 5px 10px;
+}
+
+.copy .tag::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--lime);
+  margin-right: 8px;
+  animation: blink 1.4s steps(2) infinite;
+}
+
+.copy h1 {
+  font: 800 clamp(2.2rem, 5.6vw, 4.2rem) / .98 var(--display);
+  text-transform: uppercase;
+  letter-spacing: -.01em;
+  overflow-wrap: break-word;
+}
+
+.copy h1 em {
+  font-style: normal;
+  color: var(--lime);
+}
+
+.copy p {
+  color: #b7b9bf;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  max-width: 30ch;
+}
+
+.copy p.big {
+  color: var(--text);
+}
+
+/* Estado de Nodo y Progreso */
+.status {
+  background: var(--panel);
+  padding: 14px 16px;
+  display: grid;
+  gap: 10px;
+  max-width: 420px;
+}
+
+.status .t {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--muted);
+}
+
+.status .t b {
+  color: var(--lime);
+}
+
+.track {
+  height: 6px;
+  background: var(--field);
+}
+
+.track i {
+  display: block;
+  height: 100%;
+  width: 72%;
+  background: var(--lime);
+}
+
+.cta-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Responsividad */
+@media (max-width: 860px) {
+  main.maint-main {
+    grid-template-columns: 1fr;
+  }
+  .art {
+    max-width: 520px;
+    margin-inline: auto;
+    width: 100%;
+  }
+  .copy p {
+    max-width: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .cta-row .btn {
+    flex: 1 1 100%;
+  }
+}
