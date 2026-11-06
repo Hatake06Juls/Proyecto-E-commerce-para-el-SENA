@@ -70,7 +70,7 @@
             <path d="M5 7h14l-1 14H6zM9 7a3 3 0 016 0" />
           </svg>
           <span class="mono" style="font-size:.65rem">Carrito</span>
-          <b>02</b>
+          <b id="carrito">02</b>
         </a>
 
         <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
@@ -139,7 +139,7 @@
 
         <div class="grp">
           <h3>Dimensión // Talla <span style="text-decoration:underline">GUÍA</span></h3>
-          <div class="sizes" id="sizes">
+          <div class="tallas" id="tallas">
             <button type="button" aria-pressed="false">XS</button>
             <button type="button" aria-pressed="true">S</button>
             <button type="button" aria-pressed="true">M</button>
@@ -193,7 +193,7 @@
             <div class="img">
               <img src="img/img1.webp" alt="Camiseta System Override Heavy Tee" loading="lazy">
               <span class="code mono">KULT // SS25-01</span>
-              <span class="bdg mono">Nuevo drop</span>
+              <span class="bdg mono" id="destacado">Nuevo drop</span>
             </div>
             <div class="body">
               <div class="meta mono"><b>Boxy Fit - 300 GSM</b><span><i></i><i class="w"></i></span></div>
@@ -374,7 +374,7 @@
 
         <div>
           <h4>Red Oficial</h4>
-          <ul>
+          <ul id="lista">
             <li><a href="#">INSTAGRAM <span>[EXT]</span></a></li>
             <li><a href="#">DISCORD ARCHIVE <span>[EXT]</span></a></li>
             <li><a href="#">SPOTIFY TRANSMISSIONS <span>[EXT]</span></a></li>
@@ -392,7 +392,7 @@
       </div>
     </div>
   </footer>
-
+  <script src="js/demo.js"></script>
 </body>
 
 </html>

@@ -70,7 +70,7 @@
             <path d="M5 7h14l-1 14H6zM9 7a3 3 0 016 0" />
           </svg>
           <span class="mono" style="font-size:.65rem">Cart</span>
-          <b>02</b>
+          <b id="carrito">03</b>
         </a>
 
         <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
@@ -113,7 +113,7 @@
           </div>
         </div>
 
-        <div class="hero-card">
+        <div class="card">
           <div class="ph" role="img" aria-label="Modelo con camiseta oversized negra"></div>
           <span class="spec mono">Spec: 280 GSM //<br>Architectural fit</span>
           <div class="cap">
@@ -149,14 +149,14 @@
           <p class="meta mono"><b>4 artifacts en stock</b>Camisetas con horma oversized</p>
         </div>
 
-        <div class="grid4">
+        <div class="grid">
           <article class="prod">
             <div class="img">
               <div class="badges mono"><span class="hot">Popular</span><span>280 GSM</span></div>
               <img src="img/img1.webp" alt="Camiseta Neo-Tokyo Acid Wash" loading="lazy">
             </div>
             <div class="info">
-              <div class="sku mono"><span>SKU: KLT-04-ACD</span><b>Boxy fit</b></div>
+              <div class="sku mono"><span id="referencia">SKU: KLT-04-ACD</span><b>Boxy fit</b></div>
               <h3>Neo-Tokyo Acid Wash Tee</h3>
               <div class="pr"><strong>$249.000 COP</strong><span>S M L XL</span></div>
             </div>
@@ -398,7 +398,7 @@
 
         <div>
           <h4>Red Oficial</h4>
-          <ul>
+          <ul id="lista">
             <li><a href="#">INSTAGRAM <span>[EXT]</span></a></li>
             <li><a href="#">DISCORD ARCHIVE <span>[EXT]</span></a></li>
             <li><a href="#">SPOTIFY TRANSMISSIONS <span>[EXT]</span></a></li>
@@ -416,6 +416,7 @@
       </div>
     </div>
   </footer>
+  <script src="js/demo.js"></script>
 
 </body>
 

@@ -1,0 +1,40 @@
+const grid = document.querySelector(".grid");
+
+const tarjetas = document.querySelectorAll(".prod");
+
+
+
+
+
+const tituloProducto = document.querySelector("h3");
+
+console.log(tarjetas.length);
+
+
+
+
+
+console.log(tituloProducto.textContent);
+
+const tituloDestacado = document.querySelector("#destacado");
+tituloDestacado.textContent = "Camiseta TOP";
+tituloDestacado.classList.add("Destacado");
+tituloDestacado.classList.toggle("Oculto");
+
+const li = document.createElement("li");
+li.textContent = "Elemento Nuevo ";
+document.querySelector("#lista").appendChild(li);
+
+tituloDestacado.setAttribute("tittle", "Mi lista");
+
+
+//// Componente carrito
+const contador = document.querySelector("#carrito");
+//console.log(contador.textContent);
+contador.textContent = "05";
+
+
+//Tallas
+const tallaXS = document.querySelector(".tallas button");
+console.log("tallas", tallas.length);
+tallaXS.setAttribute("aria-pressed", true);
