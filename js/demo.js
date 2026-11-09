@@ -35,9 +35,17 @@ contador.textContent = "05";
 
 
 //Tallas
-const tallaXS = document.querySelector(".tallas button");
+const tallas = document.querySelectorAll(".tallas button");
 //console.log("tallas", tallas.length);
-tallaXS.setAttribute("aria-pressed", true);
+//TtallaXS.setAttribute("aria-pressed", true);
+
+tallas.forEach((b) => {
+    b.addEventListener("click", () => {
+        const on =
+        b.getAttribute("aria-pressed");
+        b.setAttribute("aria.pressed", on !== true);
+    });
+});
 
 // COPONENTE FILTROS
 document.querySelector("#filters"). classList.toggle("open");
