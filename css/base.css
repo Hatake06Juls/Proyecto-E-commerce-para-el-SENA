@@ -113,3 +113,7 @@ h2 {
     scroll-behavior: auto !important;
   }
 }
+
+.oculto {
+  display: none !important;
+}

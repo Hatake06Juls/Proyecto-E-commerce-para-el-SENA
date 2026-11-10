@@ -584,3 +584,7 @@ aside.filters .dens p {
     grid-template-columns: 1fr;
   }
 }
+
+.producto-oculto {
+  display: none !important;
+}

@@ -113,198 +113,103 @@
   </section>
 
   <!-- Contenedor Principal: Filtros + Catálogo -->
-  <main class="wrap">
-    <div class="layout">
-      <!-- Filtros Laterales -->
-      <aside class="filters" id="filters" aria-label="Filtros de catálogo">
-        <div class="fh">
-          <h2 class="mono">☰ Filtros sistema</h2>
-          <button type="button" id="clear">[Limpiar]</button>
-        </div>
+  <main class="wrap" style="max-width: 1200px; margin: 0 auto; padding: 20px;">
 
-        <div class="grp">
-          <h3>Patrón &amp; corte <span>[04]</span></h3>
-          <label class="opt"><input type="checkbox" checked>Oversized Silhouette<em>12</em></label>
-          <label class="opt"><input type="checkbox" checked>Boxy Fit Estructurado<em>08</em></label>
-          <label class="opt"><input type="checkbox">Drop Shoulder Pesado<em>03</em></label>
-          <label class="opt"><input type="checkbox">Regular Fit Clásico<em>01</em></label>
-        </div>
+    <!-- Barra de filtros activos o controles -->
+    <div class="active mono" style="margin-bottom: 20px;">
+      <span>Filtros activos:</span>
+      <button type="button">Oversized Silhouette ×</button>
+      <button type="button">Boxy Fit ×</button>
+      <button type="button">280+ GSM ×</button>
+      <button type="button" class="l">Tallas: S, M, L ×</button>
+    </div>
 
-        <div class="grp">
-          <h3>Gramaje textil <span>GSM</span></h3>
-          <label class="opt"><input type="checkbox" checked>Heavyweight (280+ GSM)<em class="l">CORE</em></label>
-          <label class="opt"><input type="checkbox">Ultra-Heavy (350 GSM Raw)<em>SPEC</em></label>
-          <label class="opt"><input type="checkbox">Midweight (220 GSM Summer)<em>LIGHT</em></label>
-        </div>
-
-        <div class="grp">
-          <h3>Dimensión // Talla <span style="text-decoration:underline">GUÍA</span></h3>
-          <div class="tallas" id="tallas">
-            <button type="button" aria-pressed="false">XS</button>
-            <button type="button" aria-pressed="true">S</button>
-            <button type="button" aria-pressed="true">M</button>
-            <button type="button" aria-pressed="true">L</button>
-            <button type="button" aria-pressed="false">XL</button>
-            <button type="button" aria-pressed="false">XXL</button>
-          </div>
-        </div>
-
-        <div class="grp">
-          <h3>Pigmento</h3>
-          <label class="opt pig"><i class="sw" style="background:#111;border:1px solid #333"></i>Negro Obsidiana<em
-              class="l">14</em></label>
-          <label class="opt pig"><i class="sw" style="background:#f2efe8"></i>Blanco Roto Natural<em>05</em></label>
-          <label class="opt pig"><i class="sw" style="background:#3a3b3f"></i>Gris Lavado Mineral<em>03</em></label>
-          <label class="opt pig"><i class="sw" style="background:var(--lime)"></i>Verde Ácido Cyber<em>02</em></label>
-        </div>
-
-        <div class="grp">
-          <h3>Estado de lanzamiento</h3>
-          <label class="opt"><input type="radio" name="est" checked>En Stock (Envío 24h Colombia)</label>
-          <label class="opt"><input type="radio" name="est">Pre-order Drop 05</label>
-          <label class="opt"><input type="radio" name="est">Exclusivo Online Lab</label>
-        </div>
-
-        <div class="dens">
-          <div class="t mono"><span>Densidad media drop</span><b>310 GSM</b></div>
-          <div class="bar"><i></i></div>
-          <p>Nuestros tejidos resisten más de 200 lavados sin deformación de cuello o pérdida de opacidad.</p>
-        </div>
-      </aside>
-
-      <!-- Grilla de Productos -->
-      <div>
-        <button class="fbtn" id="fbtn" aria-expanded="false" aria-controls="filters">
-          <span>☰ Filtros sistema</span>
-          <span id="fcount" style="color:var(--lime)">[04]</span>
-        </button>
-
-        <div class="active mono">
-          <span>Filtros activos:</span>
-          <button type="button">Oversized Silhouette ×</button>
-          <button type="button">Boxy Fit ×</button>
-          <button type="button">280+ GSM ×</button>
-          <button type="button" class="l">Tallas: S, M, L ×</button>
-        </div>
-
-        <div class="grid" id="grid">
-          <!-- Card 1 con imagen de catálogo -->
-          <article class="card">
-            <div class="img">
-              <img src="img/img 1 acdc.jpg" alt="Camiseta ACDC" loading="lazy">
-              <span class="code mono">KULT // SS25-01</span>
-              <span class="bdg mono" id="destacado">Nuevo drop</span>
-            </div>
-            <div class="body">
-              <div class="meta mono"><b>Boxy Fit - 300 GSM</b><span><i></i><i class="w"></i></span></div>
-              <h3>Camiseta ACDC</h3>
-              <p>Serigrafía cuádruple tinta plastisol mate y corte arquitectónico de caída recta.</p>
-              <div class="buy">
-                <strong>$90.000<br>COP</strong>
-                <a class="btn lime" href="#">Comprar <span>→</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 2 -->
-          <article class="card">
-            <div class="img white">
-              <div class="ph" role="img" aria-label="Camiseta blanca Acid Logic"></div>
-              <span class="code mono">KULT // SS25-02</span>
-              <span class="bdg d mono">Top ventas</span>
-            </div>
-            <div class="body">
-              <div class="meta mono"><b style="color:var(--text)">Oversized - 280 GSM</b><span><i class="w"
-                    style="background:#fff;border-color:#fff"></i></span></div>
-              <h3>Acid Logic Archive Tee</h3>
-              <p>Blanco roto crudo sin tintes químicos ni procesos blanqueadores artificiales.</p>
-              <div class="buy">
-                <strong>$219.000<br>COP</strong>
-                <a class="btn lime" href="#">Comprar <span>→</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 3 -->
-          <article class="card">
-            <div class="img">
-              <div class="ph" role="img" aria-label="Modelo con camiseta gris mineral"></div>
-              <span class="code mono">KULT // SS25-03</span>
-              <span class="bdg r mono">Últimas unidades</span>
-            </div>
-            <div class="body">
-              <div class="meta mono"><b>Drop Shoulder - 320 GSM</b><span><i></i></span></div>
-              <h3>Cyber Dissolution Mineral Tee</h3>
-              <p>Lavado a la piedra individual con acabado vintage desgastado a mano.</p>
-              <div class="buy">
-                <strong>$249.000<br>COP</strong>
-                <a class="btn lime" href="#">Comprar <span>→</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 4 -->
-          <article class="card">
-            <div class="img">
-              <div class="ph" role="img" aria-label="Modelo con camiseta verde ácido"></div>
-              <span class="code mono">KULT // SS25-04</span>
-            </div>
-            <div class="body">
-              <div class="meta mono"><b>Boxy Fit - 280 GSM</b><span><i></i></span></div>
-              <h3>KULT Monolith Crest Tee</h3>
-              <p>Gráfica emblemática del estudio con relieve 3D en pecho y dorsal de alta densidad.</p>
-              <div class="buy">
-                <strong>$209.000<br>COP</strong>
-                <a class="btn lime" href="#">Comprar <span>→</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 5 -->
-          <article class="card">
-            <div class="img">
-              <div class="ph" role="img" aria-label="Modelo con backprint técnico"></div>
-              <span class="code mono">KULT // SS25-05</span>
-              <span class="bdg mono">Edición limitada</span>
-            </div>
-            <div class="body">
-              <div class="meta mono"><b>Ultra-Heavy - 350 GSM</b><span><i></i></span></div>
-              <h3>Manifesto Backprint 350G</h3>
-              <p>El gramaje más contundente de nuestra serie experimental con cuello 1.2" indestructible.</p>
-              <div class="buy">
-                <strong>$269.000<br>COP</strong>
-                <a class="btn lime" href="#">Comprar <span>→</span></a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Card 6 -->
-          <article class="card">
-            <div class="img">
-              <div class="ph" role="img" aria-label="Modelo con camiseta Binary Codex"></div>
-              <span class="code mono">KULT // SS25-06</span>
-            </div>
-            <div class="body">
-              <div class="meta mono"><b>Oversized - 280 GSM</b><span><i></i><i></i></span></div>
-              <h3>Binary Codex Gravure Tee</h3>
-              <p>Patrón amplio con caída recta. Doble puntada de seguridad en dobladillos y hombro caído.</p>
-              <div class="buy">
-                <strong>$225.000<br>COP</strong>
-                <a class="btn lime" href="#">Comprar <span>→</span></a>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <!-- Barra de Progreso y Paginación -->
-        <div class="more mono">
-          <span>Mostrando 6 de 24 productos disponibles • <b>25% completado</b></span>
-          <div class="bar"><i></i></div>
-          <button class="btn dark" type="button">Cargar más camisetas (18 restantes) ⌄</button>
-          <span style="font-size:.6rem">Sistema de despacho inmediato // Disponibilidad en tiempo real</span>
-        </div>
+    <div class="filtros-container" id="filtros-tallas" style="margin-bottom: 30px; text-align: center;">
+      <p class="mono" style="color: var(--muted); margin-bottom: 12px;">[ FILTRAR POR TALLA ]</p>
+      <div class="tallas-grupo" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <button class="filtro-talla btn dark" data-talla="todos">Todos</button>
+        <button class="filtro-talla btn dark" data-talla="S">S</button>
+        <button class="filtro-talla btn dark" data-talla="M">M</button>
+        <button class="filtro-talla btn dark" data-talla="L">L</button>
+        <button class="filtro-talla btn dark" data-talla="XL">XL</button>
       </div>
     </div>
+
+    <div class="filtros-container" id="filtros-colores" style="margin-bottom: 30px; text-align: center;">
+      <p class="mono" style="color: var(--muted); margin-bottom: 12px;">[ FILTRAR POR PIGMENTO / COLOR ]</p>
+      <div class="colores-grupo" style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+        <button class="filtro-color btn dark" data-color="todos">Todos</button>
+        <button class="filtro-color btn dark" data-color="gris">Gris</button>
+        <button class="filtro-color btn dark" data-color="blanco">Blanco</button>
+        <button class="filtro-color btn dark" data-color="rojo">rojo</button>
+        <button class="filtro-color btn dark" data-color="azul">Azul</button>
+      </div>
+    </div>
+
+    <!-- Grilla de Productos Centrada -->
+    <div class="grid"
+      style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; justify-content: center;">
+
+      <article class="prod" data-tallas="S" data-color="gris">
+        <div class="img">
+          <div class="badges mono"><span class="hot">Popular</span><span>280 GSM</span></div>
+          <img src="img/img 1 acdc.jpg" alt="Camiseta Band ACDC" loading="lazy">
+        </div>
+        <div class="info">
+          <div class="sku mono"><span>SKU: KLT-04-ACD</span><b>Boxy fit</b></div>
+          <h3>Camiseta ACDC</h3>
+          <div class="pr"><strong>$99.000 COP</strong><span>S M L XL</span></div>
+        </div>
+      </article>
+
+      <article class="prod" data-tallas="M" data-color="blanco">
+        <div class="img">
+          <div class="badges mono"><span class="ltd">Limitado</span><span>280 GSM</span></div>
+          <img src="img/IMG 2 Def Leppard_.jpg" alt="Camiseta Def Leppard" loading="lazy">
+        </div>
+        <div class="info">
+          <div class="sku mono"><span>SKU: KLT-04-CYB</span><b>Oversized</b></div>
+          <h3>Camiseta Def Leppard</h3>
+          <div class="pr"><strong>$110.000 COP</strong><span>M L XL</span></div>
+        </div>
+      </article>
+
+      <article class="prod" data-tallas="L" data-color="rojo">
+        <div class="img">
+          <div class="badges mono"><span>Heavy slab</span><span>280 GSM</span></div>
+          <img src="img/img 3 alice in chains.jpg" alt="Camiseta Alice In Chains" loading="lazy">
+        </div>
+        <div class="info">
+          <div class="sku mono"><span>SKU: KLT-04-CRS</span><b>Oversized</b></div>
+          <h3>Camiseta Alice in Chains</h3>
+          <div class="pr"><strong>$110.000 COP</strong><span>S M L XL</span></div>
+        </div>
+      </article>
+
+      <article class="prod" data-tallas="S,M,L" data-color="azul">
+        <div class="img">
+          <div class="badges mono"><span>Horma over</span><span>280 GSM</span></div>
+          <img src="img/img 4 nirvana.jpg" alt="Camiseta Nirvana" loading="lazy">
+        </div>
+        <div class="info">
+          <div class="sku mono"><span>SKU: KLT-04-RAW</span><b>Boxy fit</b></div>
+          <h3>Camiseta Nirvana</h3>
+          <div class="pr"><strong>$110.000 COP</strong><span>S M L XXL</span></div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Barra de Progreso y Paginación -->
+  <div class="more mono">
+    <span>Mostrando 6 de 24 productos disponibles • <b>25% completado</b></span>
+    <div class="bar"><i></i></div>
+    <button class="btn dark" type="button">Cargar más camisetas (18 restantes) ⌄</button>
+    <span style="font-size:.6rem">Sistema de despacho inmediato // Disponibilidad en tiempo real</span>
+  </div>
+  </div>
+  </div>
   </main>
 
   <!-- Especificaciones Técnicas -->
@@ -393,6 +298,7 @@
     </div>
   </footer>
   <script src="js/demo.js"></script>
+  <script src="js/filtros.js"></script>
 </body>
 
 </html>
