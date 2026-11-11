@@ -71,7 +71,8 @@
           </svg>
           <span class="mono" style="font-size:.65rem">Carrito</span>
           <b id="carrito">00</b>
-          <span id="total-carrito" class="mono" style="font-size:.6rem; color: var(--lime); margin-left: 5px;">$0 COP</span>
+          <span id="total-carrito" class="mono" style="font-size:.6rem; color: var(--lime); margin-left: 5px;">$0
+            COP</span>
         </a>
 
         <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
@@ -316,6 +317,37 @@
       </div>
     </div>
   </footer>
+
+  <div id="modal-carrito" class="producto-oculto"
+    style="position: fixed; top: 0; right: 0; width: 100%; max-width: 380px; height: 100vh; background: #111; border-left: 1px solid #333; z-index: 999; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: -5px 0 20px rgba(0,0,0,0.8);">
+
+    <div>
+      <div
+        style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 12px; margin-bottom: 16px;">
+        <h3 class="mono" style="margin: 0; color: #fff;">[ TU CARRITO ]</h3>
+        <button id="cerrar-modal" class="btn dark" style="padding: 4px 8px; cursor: pointer;">✕</button>
+      </div>
+
+      <!-- Lista dinámica de productos agregados -->
+      <ul id="lista-carrito" style="list-style: none; padding: 0; margin: 0; max-height: 60vh; overflow-y: auto;">
+        <!-- Se llena dinámicamente desde JS -->
+      </ul>
+    </div>
+
+    <div style="border-top: 1px solid #333; padding-top: 16px;">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 12px;" class="mono">
+        <span>Total:</span>
+        <strong id="modal-total-cop" style="color: var(--lime);">$0 COP</strong>
+      </div>
+
+      <div style="display: flex; gap: 8px;">
+        <button id="vaciar-carrito" class="btn dark" style="flex: 1; padding: 10px;">Vaciar</button>
+        <button id="checkout-btn" class="btn lime" style="flex: 2; padding: 10px;">Finalizar Compra</button>
+      </div>
+    </div>
+
+  </div>
+
   <script src="js/demo.js"></script>
   <script src="js/filtros.js"></script>
   <script src="js/carrito.js"></script>
